@@ -1,0 +1,17 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Données (trop lourdes, à télécharger séparément)
+data/
+
+# Modèles entraînés (facultatif)
+*.pt
+*.pth
