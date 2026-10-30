@@ -19,5 +19,12 @@ def load_data(path_test_data : str, path_train_data) -> str :
     # recupere les datasets de l'entrainement et du test
     train_dataset,test_dataset = fetch_data(path_train_data=path_train_data, path_test_data=path_test_data)
 
-    return DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True), DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False)
+    train_dataloader,test_dataloader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True), DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False)
+
+    for x,y in train_dataloader:
+        print(f"shape of X : {x.shape}\n")
+        print(f"shape of Y : {y.shape}\n")
+        break
+
+    return train_dataloader,test_dataloader
 
