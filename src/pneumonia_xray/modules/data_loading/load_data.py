@@ -2,9 +2,9 @@ from torch.utils.data import DataLoader
 from torchvision import datasets,transforms
 from .fetch_data import fetch_data
 
-BATCH_SIZE = 64
+from pneumonia_xray.config import BATCH_SIZE
 
-def load_data(path_test_data : str, path_train_data) -> str :
+def load_data(path_to_data : str) -> str :
     """
         Récupère les données de tests et d'entrainement dans leur chemin respéctif
 
@@ -17,7 +17,7 @@ def load_data(path_test_data : str, path_train_data) -> str :
     """
 
     # recupere les datasets de l'entrainement et du test
-    train_dataset,test_dataset = fetch_data(path_train_data=path_train_data, path_test_data=path_test_data)
+    train_dataset,test_dataset = fetch_data(path_to_data=path_to_data)
 
     train_dataloader,test_dataloader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True), DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False)
 

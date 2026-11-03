@@ -13,6 +13,7 @@ dependencies = [
     "rocm-sdk-core",
     "rocm-sdk-devel",
     "rocm-sdk-libraries-custom",
+    "scikit-learn>=1.9.1",
     "torch",
     "torchaudio",
     "torchvision",
