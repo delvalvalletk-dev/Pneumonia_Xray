@@ -5,3 +5,6 @@ BATCH_SIZE = 64
 EPOCHS = 10
 LEARNING_RATE = 1e-4
 SEED = 42
+
+PATH_TO_BEST_MODEL_CHECKPOINT = "C:/Users/Killian/Documents/github/Programmation/Python/Pneumonia_Xray/model_state/best.pt"
+PATH_TO_LAST_MODEL_CHECKPOINT = "C:/Users/Killian/Documents/github/Programmation/Python/Pneumonia_Xray/model_state/last.pt"
