@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
+
 from .data_loading import load_data,get_device
 from .neural_model.neural_network import NeuralNetwork
 from .neural_training.neural_train import train
